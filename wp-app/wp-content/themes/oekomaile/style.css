@@ -61,10 +61,10 @@ h1, h2, h3, h4, h5, h6, .site-title, .ugb-blog-posts__title a {
     margin-top: 0;
     margin-block-start: 0 !important;
 }
-.stk-img-wrapper {
-    aspect-ratio: 3 / 2;
+.stk-img--shape {
+    aspect-ratio: 4 / 3;
 }
-.stk-img-wrapper img {
+.stk-img--shape img {
     height: 100% !important;
     width: 100%;
 }
