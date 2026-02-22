@@ -6,7 +6,7 @@
     pty: true
     deploy_path: /usr/home/{{remote_user}}/public_html/{{deploy_directory}}
     stage: prod
-    branch: ddev-setup
+    branch: main
     bin:
         php: /usr/bin/php
 
