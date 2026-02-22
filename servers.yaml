@@ -1,0 +1,18 @@
+.server_hetzner: &hetzner_base
+    repository: 'git@bitbucket.org:grow-agency/wordpress-blueprint.git'
+    hostname: dedi1234.your-server.de
+    port: 222
+    forward_agent: true
+    pty: true
+    deploy_path: /usr/home/{{remote_user}}/public_html/{{deploy_directory}}
+    stage: prod
+    branch: main
+    bin:
+        php: /usr/bin/php
+
+hosts:
+    prod:
+        <<: *hetzner_base
+        remote_user: user1234
+        http_user: user1234
+        deploy_directory: wordpress-blueprint.com

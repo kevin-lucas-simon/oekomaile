@@ -3,7 +3,6 @@ web/app/*
 
 !web/app/plugins/
 web/app/plugins/*
-!web/app/plugins/grow-agency-plugin/
 
 !web/app/mu-plugins/
 web/app/mu-plugins/*
