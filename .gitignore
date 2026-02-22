@@ -1,0 +1,35 @@
+# Application
+web/app/*
+
+!web/app/plugins/
+web/app/plugins/*
+
+!web/app/mu-plugins/
+web/app/mu-plugins/*
+!web/app/mu-plugins/.gitkeep
+
+!web/app/themes/
+web/app/themes/*
+!web/app/themes/oekomaile/
+
+!web/app/uploads/
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+
+# WordPress
+web/wp
+web/.htaccess
+
+# Logs
+*.log
+
+# Dotenv
+.env
+.env.*
+!.env.dist
+
+# Composer
+/vendor
+
+# WP-CLI
+wp-cli.local.yml

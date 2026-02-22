@@ -1,0 +1,18 @@
+.server_hetzner: &hetzner_base
+    repository: 'git@github.com:kevin-lucas-simon/oekomaile.git'
+    hostname: dedi2338.your-server.de
+    port: 222
+    forward_agent: true
+    pty: true
+    deploy_path: /usr/home/{{remote_user}}/public_html/{{deploy_directory}}
+    stage: prod
+    branch: ddev-setup
+    bin:
+        php: /usr/bin/php
+
+hosts:
+    prod:
+        <<: *hetzner_base
+        remote_user: oekome
+        http_user: oekome
+        deploy_directory: oekomaile.de
