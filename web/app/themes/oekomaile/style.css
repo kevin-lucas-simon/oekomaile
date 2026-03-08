@@ -3,56 +3,40 @@ Theme Name:   Ökomaile
 Description:  Das Design der Ökomaile Webseite
 Author:       Kevin Lucas Simon
 Template:     twentytwentythree
-Version:      1.0.0
+Version:      2.0
 Text Domain:  oekomaile
 */
 
+@import "css/legacy_style.css";
+
 /* fonts */
 @font-face {
-    font-family: 'Cookies and Milk';
-    src: url('font/cookiesandmilk.otf');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Bricolage Grotesque';
+    src: url('font/bricolagegrotesque.ttf');
+}
+@font-face {
+    font-family: 'Rubik Mono One';
+    src: url('font/rubikmonoone.ttf');
+    font-weight: 400;
+}
+body {
+    font-family: 'Bricolage Grotesque', sans-serif;
 }
 h1, h2, h3, h4, h5, h6, .site-title, .ugb-blog-posts__title a {
-    font-family: 'Cookies and Milk';
+    font-family: 'Rubik Mono One', sans-serif;
 }
 
+/* link coloring should use given color */
+:root :where(.wp-block-post-content a:where(:not(.wp-element-button))) {
+    color: inherit;
+}
 
-
-/*!* remove header margins *!*/
+/* remove header margins */
 .wp-site-blocks {
     padding-top: 0;
 }
 .wp-site-blocks main {
     margin-top: 0 !important;
-}
-
-/* add landscape header css */
-.oko-header { /* adds custom padding and margin for the special block */
-    padding: 0 !important;
-    margin-bottom: 64px !important;
-}
-@media only screen and (min-width: 1200px) {
-    .oko-header { /* add custom max with */
-        max-width: 1200px;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-}
-.oko-header>div { /* removes random margin in bigger screens */
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    max-width: none !important;
-}
-.oko-header>div, .oko-header>div>div, .oko-header>div>div>div, .oko-header>div>div>div>div {
-    height: 100%;
-}
-.oko-header>div>div>div>div>*:first-child { /* header title margin */
-    margin-top: 10vh !important;
-}
-.oko-header>div>div>div>div>div:last-child { /* applies header footer at the bottom */
-    margin-top: auto !important;
 }
 
 /* modal css */

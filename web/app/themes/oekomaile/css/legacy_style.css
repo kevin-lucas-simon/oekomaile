@@ -1,0 +1,60 @@
+/*
+This file contains the legacy style for previous versions.
+This is used in archived posts and can be activated by the 'oko-legacy' page class.
+*/
+
+/* fonts */
+@font-face {
+    font-family: 'Cookies and Milk';
+    src: url('../font/cookiesandmilk.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+body:has(.oko-legacy) h1,
+body:has(.oko-legacy) h2,
+body:has(.oko-legacy) h3,
+body:has(.oko-legacy) h4,
+body:has(.oko-legacy) h5,
+body:has(.oko-legacy) h6,
+body:has(.oko-legacy) .site-title,
+body:has(.oko-legacy) .ugb-blog-posts__title a {
+    font-family: 'Cookies and Milk', sans-serif;
+}
+
+/*!* remove header margins *!*/
+body:has(.oko-legacy) .wp-site-blocks {
+    padding-top: 0;
+}
+body:has(.oko-legacy) .wp-site-blocks main {
+    margin-top: 0 !important;
+}
+
+/* add landscape header css */
+body:has(.oko-legacy) .oko-header { /* adds custom padding and margin for the special block */
+    padding: 0 !important;
+    margin-bottom: 64px !important;
+}
+@media only screen and (min-width: 1200px) {
+    body:has(.oko-legacy) .oko-header { /* add custom max with */
+        max-width: 1200px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+body:has(.oko-legacy) .oko-header > div { /* removes random margin in bigger screens */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: none !important;
+}
+body:has(.oko-legacy) .oko-header > div,
+body:has(.oko-legacy) .oko-header > div > div,
+body:has(.oko-legacy) .oko-header > div > div > div,
+body:has(.oko-legacy) .oko-header > div > div > div >div {
+    height: 100%;
+}
+body:has(.oko-legacy) .oko-header > div > div > div > div > *:first-child { /* header title margin */
+    margin-top: 10vh !important;
+}
+body:has(.oko-legacy) .oko-header > div > div > div > div > div:last-child { /* applies header footer at the bottom */
+    margin-top: auto !important;
+}
