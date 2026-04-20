@@ -63,14 +63,14 @@ h1, h2, h3, h4, h5, h6, .site-title, .ugb-blog-posts__title a {
 @media (min-width: 768px) {
     .versatz {
         column-count: 2;
-        column-gap: 5rem;
+        column-gap: 4rem;
     }
 }
 
 .versatz > div {
     display: inline-block;
     width: 100%;
-    margin-bottom: 5rem !important;
+    margin-bottom: 4rem !important;
     break-inside: avoid;
 }
 
