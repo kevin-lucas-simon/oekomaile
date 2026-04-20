@@ -52,3 +52,24 @@ h1, h2, h3, h4, h5, h6, .site-title, .ugb-blog-posts__title a {
     height: 100% !important;
     width: 100%;
 }
+
+/* versatz feature */
+.versatz {
+    display: block;
+    column-count: 1;
+    column-gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .versatz {
+        column-count: 2;
+    }
+}
+
+.versatz > div {
+    --stk-block-margin-bottom: 5rem;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: var(--stk-block-margin-bottom);
+    break-inside: avoid;
+}
