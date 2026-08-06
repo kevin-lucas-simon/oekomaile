@@ -20,8 +20,9 @@ web/app/uploads/*
 web/wp
 web/.htaccess
 
-# Logs
+# Logs and dumps
 *.log
+*.sql
 
 # Dotenv
 .env
@@ -33,3 +34,6 @@ web/.htaccess
 
 # WP-CLI
 wp-cli.local.yml
+
+# IDEA
+.idea

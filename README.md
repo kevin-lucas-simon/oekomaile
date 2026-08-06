@@ -17,7 +17,8 @@ cp .env.dist .env
 ddev composer install
 ddev start
 # import database dump
-ddev mysql < dump.sql
+vendor/bin/dep dump <environment>
+ddev import-db --file=<environment>-<date>.sql
 ddev wp search-replace 'oekomaile.de' 'oekomaile.ddev.site' --all-tables
 ```
 

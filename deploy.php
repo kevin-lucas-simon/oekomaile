@@ -41,3 +41,18 @@ after('deploy:publish', 'deploy:clear_paths');
 after('deploy:publish', 'deploy:clear_cache');
 
 after('deploy:failed', 'deploy:unlock');
+
+task('dump', function () {
+    $environment = currentHost()->getAlias();
+    $filename = "{$environment}-".date('Y-m-d').'.sql';
+
+    $remotePath = '{{deploy_path}}/current/'.$filename;
+
+    run("cd {{deploy_path}}/current && wp db export {$filename}");
+
+    download($remotePath, __DIR__.'/'.$filename);
+
+    run("rm {$remotePath}");
+
+    writeln("Dump downloaded: {$filename}");
+});
