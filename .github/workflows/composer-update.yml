@@ -1,0 +1,40 @@
+name: Weekly update
+
+on:
+  schedule:
+    - cron: '0 3 * * 1' # monday 03:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency: composer_update
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+
+      - name: Update dependencies
+        run: composer update --no-interaction --no-progress
+
+      - name: Commit and push if composer.lock changed
+        run: |
+          if ! git diff --quiet -- composer.lock; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add composer.lock
+            git commit -m "Update Composer dependencies"
+            git push
+          else
+            echo "No dependency updates."
+          fi
