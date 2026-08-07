@@ -17,7 +17,7 @@ cp .env.dist .env
 ddev composer install
 ddev start
 # import database dump
-vendor/bin/dep dump <environment>
+vendor/bin/dep db:dump <environment>
 ddev import-db --file=<environment>-<date>.sql
 ddev wp search-replace 'oekomaile.de' 'oekomaile.ddev.site' --all-tables
 ```
@@ -90,10 +90,13 @@ ddev composer require <package_name>
 
 ## Deployment
 
+There is an automatic deployment pipeline on GitHub Actions.
+See `/.github/workflows/deploy.yml`.
+
 See `servers.yaml` for the available environments.
 Please add your SSH public key to the designated server's authorized keys.
 
-To start the deployment run:
+To start the manual deployment run:
 
 ```bash
 # checkout to desired branch on local device
