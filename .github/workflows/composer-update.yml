@@ -28,6 +28,7 @@ jobs:
         run: composer update --no-interaction --no-progress
 
       - name: Commit and push if composer.lock changed
+        id: commit
         run: |
           if ! git diff --quiet -- composer.lock; then
             git config user.name "github-actions[bot]"
@@ -35,6 +36,15 @@ jobs:
             git add composer.lock
             git commit -m "Update Composer dependencies"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           else
             echo "No dependency updates."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Deploy
+        if: steps.commit.outputs.changed == 'true'
+        uses: deployphp/action@v1
+        with:
+          private-key: ${{ secrets.PRIVATE_KEY }}
+          dep: deploy
