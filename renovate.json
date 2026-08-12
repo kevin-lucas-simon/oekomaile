@@ -5,6 +5,7 @@
   "schedule": ["before 4am on monday"],
   "enabledManagers": ["composer"],
   "platformAutomerge": true,
+  "mode": "full",
   "packageRules": [
     {
       "matchManagers": ["composer"],
