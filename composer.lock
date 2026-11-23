@@ -277,7 +277,8 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-08-24T09:06:52+00:00"
+            "time": "2026-08-24T09:06:52+00:00",
+            "published-time": "2026-08-24T09:07:57+00:00"
         },
         {
             "name": "maml/maml",
@@ -461,7 +462,8 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-08-24T00:54:40+00:00"
+            "time": "2026-08-24T00:54:40+00:00",
+            "published-time": "2026-08-24T01:09:05+00:00"
         },
         {
             "name": "psr/container",
@@ -652,7 +654,7 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "7.1.4",
+            "version": "7.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/wordpress.git",
@@ -683,7 +685,7 @@
             ],
             "support": {
                 "issues": "https://github.com/roots/wordpress/issues",
-                "source": "https://github.com/roots/wordpress/tree/7.1.4"
+                "source": "https://github.com/roots/wordpress/tree/7.1.5"
             },
             "funding": [
                 {
@@ -692,7 +694,7 @@
                 }
             ],
             "time": "2026-03-22T13:26:54+00:00",
-            "published-time": "2026-10-28T17:16:37+00:00"
+            "published-time": "2026-11-18T17:14:22+00:00"
         },
         {
             "name": "roots/wordpress-core-installer",
@@ -764,23 +766,23 @@
         },
         {
             "name": "roots/wordpress-no-content",
-            "version": "7.1.4",
+            "version": "7.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "7.1.4"
+                "reference": "7.1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.w.org/release/wordpress-7.1.4-no-content.zip",
-                "reference": "7.1.4",
-                "shasum": "1dd4bfa7b13dec725c0062a3fb62ba0536cb8699"
+                "url": "https://downloads.w.org/release/wordpress-7.1.5-no-content.zip",
+                "reference": "7.1.5",
+                "shasum": "360c3644ce4e382e254aa4f0c1e56d5082efe2ff"
             },
             "require": {
                 "php": ">= 7.4"
             },
             "provide": {
-                "wordpress/core-implementation": "7.1.4"
+                "wordpress/core-implementation": "7.1.5"
             },
             "suggest": {
                 "ext-curl": "Performs remote request operations.",
@@ -831,8 +833,8 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-10-28T17:15:58+00:00",
-            "published-time": "2026-10-28T17:16:09+00:00"
+            "time": "2026-11-18T17:13:39+00:00",
+            "published-time": "2026-11-18T17:13:48+00:00"
         },
         {
             "name": "roots/wp-config",
@@ -1130,7 +1132,8 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-04-10T16:19:22+00:00"
+            "time": "2026-04-10T16:19:22+00:00",
+            "published-time": "2026-04-26T14:44:50+00:00"
         },
         {
             "name": "symfony/polyfill-intl-grapheme",
@@ -1382,7 +1385,8 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-27T06:59:30+00:00"
+            "time": "2026-05-27T06:59:30+00:00",
+            "published-time": "2026-06-09T06:07:20+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
@@ -1466,7 +1470,8 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-04-10T16:19:22+00:00"
+            "time": "2026-04-10T16:19:22+00:00",
+            "published-time": "2026-04-26T14:44:45+00:00"
         },
         {
             "name": "symfony/process",
@@ -1789,16 +1794,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v5.8.0",
+            "version": "v5.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpdotenv/phpdotenv.git",
-                "reference": "96149103e62ac67e915f6d2ef59b72dee2e011e0"
+                "reference": "ba37876e98122ca15151247ce1187d20ee8bf4e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpdotenv/phpdotenv/zipball/96149103e62ac67e915f6d2ef59b72dee2e011e0",
-                "reference": "96149103e62ac67e915f6d2ef59b72dee2e011e0",
+                "url": "https://api.github.com/repos/phpdotenv/phpdotenv/zipball/ba37876e98122ca15151247ce1187d20ee8bf4e0",
+                "reference": "ba37876e98122ca15151247ce1187d20ee8bf4e0",
                 "shasum": ""
             },
             "require": {
@@ -1857,7 +1862,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpdotenv/phpdotenv/issues",
-                "source": "https://github.com/phpdotenv/phpdotenv/tree/v5.8.0"
+                "source": "https://github.com/phpdotenv/phpdotenv/tree/v5.8.1"
             },
             "funding": [
                 {
@@ -1869,7 +1874,8 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-10-25T16:26:19+00:00"
+            "time": "2026-11-23T00:53:11+00:00",
+            "published-time": "2026-11-23T00:53:39+00:00"
         },
         {
             "name": "wpackagist-plugin/happyforms",
